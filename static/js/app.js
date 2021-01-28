@@ -14,3 +14,6 @@ function displayTable(data){
 }
 
 displayTable(tableData);
+
+var button = d3.select("#filter-btn");
+var dateInput = d3.select("#datetime");
