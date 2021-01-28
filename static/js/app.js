@@ -13,16 +13,19 @@ function displayTable(data){
     })
 }
 
+// Displays table on website
 displayTable(tableData);
 
+// Creates variables for the button and the text field 
 var button = d3.select("#filter-btn");
 var dateInput = d3.select("#datetime");
 
-
+// Refreshes data with new information
 function inputChecker(){
     d3.event.preventDefault();
     var updatedTable = tableData.filter(sighting => sighting.datetime === dateInput.property("value"));
     displayTable(updatedTable)
 }
 
+// Executes on click
 button.on("click", inputChecker);
