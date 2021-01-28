@@ -2,6 +2,7 @@
 var tableData = data;
 var tbody = d3.select("tbody");
 
+// Creates table on the website
 function displayTable(data){
     tbody.text("");
     data.forEach(function (info) {
