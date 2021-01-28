@@ -17,3 +17,12 @@ displayTable(tableData);
 
 var button = d3.select("#filter-btn");
 var dateInput = d3.select("#datetime");
+
+
+function inputChecker(){
+    d3.event.preventDefault();
+    var updatedTable = tableData.filter(sighting => sighting.datetime === dateInput.property("value"));
+    displayTable(updatedTable)
+}
+
+button.on("click", inputChecker);
